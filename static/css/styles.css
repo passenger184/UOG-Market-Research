@@ -1,0 +1,135 @@
+:root {
+  --color-white: hsl(252, 30%, 100%);
+  --color-light: hsl(252, 30%, 95%);
+  --color-gray: hsl(252, 15%, 65%);
+  --color-primary: hsl(252, 75%, 60%);
+  --color-secondary: hsl(252, 100%, 90%);
+  --color-success: hsl(120, 95%, 65%);
+  --color-danger: hsl(0, 95%, 65%);
+  --color-dark: hsl(252, 30%, 17%);
+  --color-black: hsl(252, 30%, 10%);
+
+  --border-radius: 2rem;
+  --card-border-radius: 1rem;
+  --btn-padding: 0.6rem 2rem;
+  --search-padding: 0.6rem 1rem;
+  --card-padding: 1rem;
+
+  --sticky-top-left: 5.4rem;
+  --sticky-top-right: -18rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+}
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--color-dark);
+  background: var(--color-light);
+  overflow-x: hidden;
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--btn-padding);
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 300ms ease;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.form-main-container {
+  width: 80%;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 18vw auto 20vw;
+  gap: 2rem;
+}
+.form-middle {
+  border-radius: 10px;
+
+  background-color: var(--color-white);
+  box-shadow: 0 0 5px var(--color-gray);
+  height: min-content;
+}
+.form-middle h2 {
+  margin: 2rem 2rem;
+}
+
+.profile-form-control {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  position: relative;
+}
+
+.profile-form-control label {
+  color: #777;
+  margin-bottom: 5px;
+  position: absolute;
+  top: 30%;
+  right: 72%;
+}
+
+.profile-form-control input,
+.profile-form-control select,
+.profile-form-control textarea {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  width: 50%;
+  padding: 10px;
+
+  font-size: 14px;
+  margin-left: 5rem;
+}
+
+.form-middle button {
+  cursor: pointer;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin: 20px auto;
+  width: 30%;
+}
+.form-middle button:hover {
+  background-color: hsla(252, 75%, 60%, 0.8);
+  border: 2px solid hsla(252, 75%, 60%, 0.8);
+}
+
+#phone {
+  padding: 10px;
+  margin-left: 130px;
+  padding-right: 20px;
+  width: 60%;
+}
+
+.iti__flag-container {
+  margin-left: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}

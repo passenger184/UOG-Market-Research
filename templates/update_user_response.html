@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <title>Product research</title>
+  </head>
+  <body">
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="{% static 'img/UoG-Logo.png' %}" alt="UOG logo" />
+      </div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li>Welcome! {{request.user.username|capfirst}}</li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="form-main-container" >
+    <div class="left"></div>
+    <div class="middle form-middle">
+      <form action="" class="form" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h2>Research Form</h2>
+        <div class="profile-form-control">
+          <label for="company_name">Company Name</label>
+          <input
+            disabled
+            value="{{product.company_name}}"
+            name="company_name"
+            type="text"
+            id="company_name"
+          />
+        </div>
+        <div class="profile-form-control">
+          <label for="product_name">Product Name</label>
+          <input
+            disabled
+            value="{{product.product_name}}"
+            name="product_name"
+            type="text"
+            id="product_name"
+            placeholder="Enter product name"
+          />
+        </div>
+        <div class="profile-form-control">
+          <label for="quantity">Quantity</label>
+          <input
+            disabled
+            value="{{product.quantity}}"
+            name="quantity"
+            type="number"
+            id="quantity"
+            placeholder="Enter the quantity"
+          />
+        </div>
+        <div class="profile-form-control">
+          <label for="unit">Unit</label>
+          <input
+            disabled
+            value="{{product.unit}}"
+            name="unit"
+            type="text"
+            id="unit"
+          />
+        </div>
+        <div class="profile-form-control">
+          <label for="price">Price Per Unit</label>
+          <input
+          min="0"
+            required
+            value="{{product.price}}"
+            name="price"
+            type="number"
+            id="price"
+            placeholder="Enter the price"
+            oninput="calculateTotal()"
+          />
+        </div>
+        <div class="profile-form-control">
+          <label for="total">Total Price</label>
+          <input
+          
+          readonly
+            value="{{product.total}}"
+            name="total"
+            type="number"
+            id="total"
+            placeholder="Total Price in Birr"
+          />
+        </div>
+        <div class="profile-form-control">
+          <label for="availability">Availability</label>
+          <select id="availability" name='availability' required>
+            <option selected  value='{{product.availability}}'>{{product.availability}}</option>
+            <option value='Yes'>Yes, I have the product</option>
+            <option value='No'>No, I don't have the product</option>
+          </select>
+        </div>
+        <div class="profile-form-control">
+          <label for="remark">Remark</label>
+          <input
+            value="{{product.remark}}"
+            name="remark"
+            type="text"
+            id="remark"
+            value="{{product.remark}}"
+          />
+        </div>
+        <div style="display: inline;">
+          <button type="submit" style="margin-top: 2rem; padding: 10px 5px;">Update Response</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="right"></div>
+  </div>
+  <footer>
+    <p class="my-2">
+      Copyright ©2023 UoG. All rights reserved | Developed by IOT students
+      under the guidance of Mr.Zemenu.
+    </p>
+  </footer>
+    <script>
+      function calculateTotal() {
+        var price = document.getElementById("price").value;
+        var quantity = document.getElementById("quantity").value;
+        var total = price * quantity;
+        document.getElementById("total").value = total.toFixed(2);
+      }
+    </script>
+    
+  </body>
+</html>

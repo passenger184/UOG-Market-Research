@@ -1,0 +1,884 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Snow - Clean & Minimal Portfolio HTML template."
+    />
+    <meta
+      name="keywords"
+      content="portfolio, clean, minimal, blog, template, portfolio website"
+    />
+    <meta name="author" content="nK" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UOG Market Research</title>
+
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/assets/css/combined.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'assets/assets/css/some.css' %}" />
+  </head>
+
+  <body>
+    <header class="nk-header">
+      <!--
+        START: Navbar
+    -->
+      <nav
+        class="nk-navbar nk-navbar-top nk-navbar-sticky nk-navbar-transparent nk-navbar-white-text-on-top"
+      >
+        <div class="container">
+          <div class="nk-nav-table">
+            <a href="" class="nk-nav-logo pri">
+              <img
+                src="{% static 'img/UoG-Logo.png' %}"
+                alt=""
+                width="185"
+                class="nk-nav-logo-onscroll"
+              />
+              <img src="{% static 'img/UoG-Logo.png' %}" alt="" width="200" />
+            </a>
+
+            <ul
+              class="nk-nav nk-nav-right hidden-md-down"
+              data-nav-mobile="#nk-nav-mobile"
+            >
+              <li>
+                <a href=""><b>Inquiries</b></a>
+              </li>
+              <li>
+                <a href=""><b>Responses</b></a>
+              </li>
+              <li>
+                <a href="index.html#about"><b>About</b></a>
+              </li>
+              <li>
+                <a href="index.html#contact"><b>Contact</b></a>
+              </li>
+              <li class="butt">
+                <a href="" class="butto"><b>Logout</b></a>
+              </li>
+            </ul>
+
+            <ul class="nk-nav nk-nav-right nk-nav-icons">
+              <li class="single-icon hidden-lg-up">
+                <a href="#" class="nk-navbar-full-toggle">
+                  <span class="nk-icon-burger">
+                    <span class="nk-t-1"></span>
+                    <span class="nk-t-2"></span>
+                    <span class="nk-t-3"></span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- END: Navbar -->
+    </header>
+
+    <!--
+    START: Navbar Mobile
+-->
+    <nav
+      class="nk-navbar nk-navbar-full nk-navbar-align-center"
+      id="nk-nav-mobile"
+    >
+      <div class="nk-navbar-bg">
+        <div
+          class="bg-image"
+          style="
+            background-image: url('static/assets/assets/images/bg-menu.jpg');
+          "
+        ></div>
+      </div>
+      <div class="nk-nav-table">
+        <div class="nk-nav-row">
+          <div class="container">
+            <div class="nk-nav-header">
+              <div class="nk-nav-logo">
+                <a href="main_company.html" class="nk-nav-logo">
+                  <img
+                    src="{% static 'img/UoG-Logo.png' %}"
+                    alt=""
+                    width="185"
+                  />
+                </a>
+              </div>
+
+              <div class="nk-nav-close nk-navbar-full-toggle">
+                <span class="nk-icon-close"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nk-nav-row-full nk-nav-row">
+          <div class="nano">
+            <div class="nano-content">
+              <div class="nk-nav-table">
+                <div
+                  class="nk-nav-row nk-nav-row-full nk-nav-row-center nk-navbar-mobile-content"
+                >
+                  <ul class="nk-nav">
+                    <!-- Here will be inserted menu from [data-mobile-menu="#nk-nav-mobile"] -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nk-nav-row">
+          <div class="container">
+            <div class="nk-nav-social">
+              <ul>
+                <li>
+                  <a href="https://twitter.com/nkdevv"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/unvabdesign/"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://dribbble.com/_nK"
+                    ><i class="fa fa-dribbble"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/unvab/"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- END: Navbar Mobile -->
+
+    <div class="nk-main">
+      <!-- START: Header Title -->
+      <div class="nk-header-title nk-header-title-full">
+        <div class="bg-image">
+          <div
+            style="background-image: url('static/img/University_of_Gondar.JPG')"
+          ></div>
+          <div
+            class="bg-image-overlay"
+            style="background-color: rgba(12, 12, 12, 0.6)"
+          ></div>
+        </div>
+        <div class="nk-header-table">
+          <div class="nk-header-table-cell">
+            <div class="container hero">
+              <h2 class="nk-subtitle text-white">
+                Welcome To Our Market Research Hub!
+              </h2>
+
+              <h1
+                class="nk-title display-4 text-white"
+                style="font-family: Arial, Helvetica, sans-serif"
+              >
+                Empowering Research for Smart Purchasing
+                <br />
+                <em class="fw-500">at University of Gondar</em>
+              </h1>
+
+              <div class="nk-gap"></div>
+              <div class="nk-header-text text-white">
+                <div class="nk-gap-4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <a
+            class="nk-header-title-scroll-down text-white"
+            href="#nk-header-title-scroll-down"
+          >
+            <span class="pe-7s-angle-down"></span>
+          </a>
+        </div>
+      </div>
+
+      <div id="nk-header-title-scroll-down"></div>
+
+      <!-- END: Header Title -->
+
+      <!-- START: About Our Agency -->
+      <div class="bg-white" id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-xs-center">
+              <div class="nk-gap-4 mt-9"></div>
+
+              <h2 class="display-4">About Our University</h2>
+              <div class="nk-gap mnt-5"></div>
+
+              <p>
+                Welcome to the University of Gondar, a leading institution of
+                higher learning in Ethiopia. With a rich heritage and a
+                commitment to excellence, we have been shaping futures and
+                empowering minds for over a century. Our esteemed faculty and
+                dedicated staff are passionate about fostering a vibrant
+                academic community, where cutting-edge research and innovative
+                teaching methodologies come together.
+              </p>
+
+              <img
+                src="{% static 'assets/assets/images/about-me-signature.png' %}"
+                alt=""
+                class="nk-img-fit"
+              />
+
+              <div class="nk-gap-4 mt-25"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END: About Our Agency -->
+
+      <!-- START: Features -->
+      <div class="nk-box bg-dark-1 text-white">
+        <div
+          class="bg-image bg-image-parallax"
+          style="
+            background-image: url('static/assets/assets/images/bg-pattern.jpg');
+          "
+        ></div>
+        <div class="nk-gap-5 mnt-6"></div>
+        <div class="container">
+          <div class="row vertical-gap">
+            <div class="col-md-6 col-lg-3 numbers">
+              <div class="nk-ibox-1">
+                <div class="nk-ibox-icon">
+                  <span class="pe-7s-portfolio"></span>
+                </div>
+                <div class="nk-ibox-cont rect">
+                  <div class="nk-ibox-title add">120</div>
+                  <div class="nk-ibox-text">COMPANY REGISTERED</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 numbers">
+              <div class="nk-ibox-1">
+                <div class="nk-ibox-icon">
+                  <span class="pe-7s-clock"></span>
+                </div>
+                <div class="nk-ibox-cont rect">
+                  <div class="nk-ibox-title add">320</div>
+                  <div class="nk-ibox-text">PRICE INQUIRIES SENT</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 numbers">
+              <div class="nk-ibox-1">
+                <div class="nk-ibox-icon">
+                  <span class="pe-7s-star"></span>
+                </div>
+                <div class="nk-ibox-cont rect">
+                  <div class="nk-ibox-title add">250</div>
+                  <div class="nk-ibox-text">RESPONSES RECEIVED</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="nk-ibox-1">
+                <div class="nk-ibox-icon">
+                  <span class="pe-7s-like"></span>
+                </div>
+                <div class="nk-ibox-cont">
+                  <div class="nk-ibox-title add1">80<span>%</span></div>
+                  <div class="nk-ibox-text">AVERAGE RESPONSE</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nk-gap-5 mnt-6"></div>
+      </div>
+      <!-- END: Features -->
+
+      <!-- START: Portfolio -->
+      <div class="nk-box bg-white" id="projects">
+        <div class="nk-gap-4 mt-5"></div>
+
+        <h2 class="text-xs-center display-4">Featured Categories</h2>
+
+        <div class="nk-gap mnt-6"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+              <div class="text-xs-center">
+                Showcasing a range of products frequently purchased by the
+                University of Gondar for various purposes.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nk-gap-2 mt-12"></div>
+        <div class="container">
+          <div class="nk-portfolio-list nk-isotope nk-isotope-3-cols">
+            <div class="nk-isotope-item" data-filter="Print">
+              <div
+                class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1"
+              >
+                <div class="nk-portfolio-item-image">
+                  <div
+                    style="
+                      background-image: url('static/assets/assets/images/uni/book2.jpg');
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center"
+                >
+                  <div>
+                    <h2 class="portfolio-item-title h3">
+                      Educational materials
+                    </h2>
+                    <div class="portfolio-item-category"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nk-isotope-item" data-filter="Photography">
+              <div
+                class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1"
+              >
+                <div class="nk-portfolio-item-image">
+                  <div
+                    style="
+                      background-image: url('static/assets/assets/images/uni/sec2.jpg');
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center"
+                >
+                  <div>
+                    <h2 class="portfolio-item-title h3">
+                      Safety and security equipment
+                    </h2>
+                    <div class="portfolio-item-category"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nk-isotope-item" data-filter="Print">
+              <div
+                class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1"
+              >
+                <div class="nk-portfolio-item-image">
+                  <div
+                    style="
+                      background-image: url('static/assets/assets/images/uni/comp3.jpg');
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center"
+                >
+                  <div>
+                    <h2 class="portfolio-item-title h3">Computers</h2>
+                    <div class="portfolio-item-category"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nk-isotope-item" data-filter="Branding">
+              <div
+                class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1"
+              >
+                <div class="nk-portfolio-item-image">
+                  <div
+                    style="
+                      background-image: url('static/assets/assets/images/uni/elec3.jpg');
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center"
+                >
+                  <div>
+                    <h2 class="portfolio-item-title h3">Electronics</h2>
+                    <div class="portfolio-item-category"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nk-isotope-item" data-filter="Design">
+              <div
+                class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1"
+              >
+                <div class="nk-portfolio-item-image">
+                  <div
+                    style="
+                      background-image: url('static/assets/assets/images/uni/food2.jpg');
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center"
+                >
+                  <div>
+                    <h2 class="portfolio-item-title h3">Food and Beverages</h2>
+                    <div class="portfolio-item-category"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nk-isotope-item" data-filter="Design">
+              <div
+                class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1"
+              >
+                <div class="nk-portfolio-item-image">
+                  <div
+                    style="
+                      background-image: url('static/assets/assets/images/uni/fur4.jpg');
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center"
+                >
+                  <div>
+                    <h2 class="portfolio-item-title h3">Furniture</h2>
+                    <div class="portfolio-item-category"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nk-isotope-item" data-filter="Branding">
+              <div
+                class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1"
+              >
+                <div class="nk-portfolio-item-image">
+                  <div
+                    style="
+                      background-image: url('static/assets/assets/images/uni/med1.jpg');
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center"
+                >
+                  <div>
+                    <h2 class="portfolio-item-title h3">Medical supplies</h2>
+                    <div class="portfolio-item-category"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nk-isotope-item" data-filter="Photography">
+              <div
+                class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1"
+              >
+                <div class="nk-portfolio-item-image">
+                  <div
+                    style="
+                      background-image: url('static/assets/assets/images/uni/off1.jpg');
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center"
+                >
+                  <div>
+                    <h2 class="portfolio-item-title h3">Office Supplies</h2>
+                    <div class="portfolio-item-category"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nk-isotope-item" data-filter="Mockup">
+              <div
+                class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1"
+              >
+                <div class="nk-portfolio-item-image">
+                  <div
+                    style="
+                      background-image: url('static/assets/assets/images/uni/const.jpg');
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center"
+                >
+                  <div>
+                    <h2 class="portfolio-item-title h3">Building Materials</h2>
+                    <div class="portfolio-item-category"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nk-gap-4 mt-15"></div>
+      </div>
+      <!-- END: Portfolio -->
+
+      <!-- START: Reviews -->
+      <div class="nk-box bg-dark-1">
+        <div
+          class="bg-image bg-image-parallax"
+          style="
+            background-image: url('static/assets/assets/images/bg-pattern.jpg');
+          "
+        ></div>
+        <div class="nk-gap-5 mnt-6"></div>
+        <div class="nk-gap-3"></div>
+        <div class="container-fluid">
+          <!-- START: Carousel -->
+          <div
+            class="nk-carousel nk-carousel-all-visible text-white"
+            data-autoplay="18000"
+            data-dots="true"
+          >
+            <div class="nk-carousel-inner">
+              <div>
+                <div>
+                  <blockquote class="nk-blockquote-style-1 text-white">
+                    <p>
+                      Efficient and effective - that's how I describe our
+                      experience with UOG Market Research. Their platform helps
+                      us meet the university's needs seamlessly, saving time and
+                      effort.
+                    </p>
+                    <cite>Hussen, CEO of Huss Enterprises PLC.</cite>
+                  </blockquote>
+                  <div class="nk-gap-3 mt-10"></div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <blockquote class="nk-blockquote-style-1 text-white">
+                    <p>
+                      UOG Market Research has revolutionized our business. Their
+                      platform connects us directly to University of Gondar,
+                      streamlining our operations and boosting our sales. Highly
+                      recommended!
+                    </p>
+                    <cite>Khalid, CEO of Addis Electronics Ltd. </cite>
+                  </blockquote>
+                  <div class="nk-gap-3 mt-10"></div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <blockquote class="nk-blockquote-style-1 text-white">
+                    <p>
+                      Working with UOG Market Research has been a game-changer.
+                      Their insights and connections have expanded our business
+                      opportunities with University of Gondar. A truly valuable
+                      partnership.
+                    </p>
+                    <cite>Muvark, CEO of HealthPlus Pharmaceuticals</cite>
+                  </blockquote>
+                  <div class="nk-gap-3 mt-10"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END: Carousel -->
+        </div>
+        <div class="nk-gap-4 mt-3"></div>
+      </div>
+      <!-- END: Reviews -->
+
+      <!-- START: Partners -->
+
+      <!-- END: Partners -->
+
+      <!-- START: Blog -->
+      <div class="nk-box bg-gray-1" id="blog">
+        <div class="nk-gap-4 mt-5"></div>
+
+        <h2 class="text-xs-center display-4">Our Research Experts</h2>
+
+        <div class="nk-gap mnt-6"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+              <div class="text-xs-center">
+                Meet the dedicated team of researchers driving innovative market
+                solutions for University of Gondar.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nk-gap-2 mt-12"></div>
+        <div class="container">
+          <!-- START: Carousel -->
+          <div
+            class="nk-carousel-2 nk-carousel-x2 nk-carousel-no-margin nk-carousel-all-visible nk-blog-isotope"
+            data-dots="true"
+          >
+            <div class="nk-carousel-inner">
+              <div>
+                <div>
+                  <div class="pl-15 pr-15 services__card">
+                    <div class="nk-blog-post">
+                      <div class="nk-post-thumb">
+                        <img
+                          height="448px"
+                          src="{% static 'assets/assets/researcher/a.jpg' %}"
+                          alt=""
+                          class="nk-img-stretch"
+                        />
+
+                        <div class="nk-post-category"></div>
+                      </div>
+                      <h2 class="nk-post-title h4">Dagim Berhan</h2>
+
+                      <div class="nk-post-text">
+                        <p>Market Research Analyst</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nk-gap-1"></div>
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <div class="pl-15 pr-15 services__card">
+                    <div class="nk-blog-post">
+                      <div class="nk-post-thumb">
+                        <img
+                          height="448px"
+                          src="{% static 'assets/assets/researcher/c.jpg' %}"
+                          alt=""
+                          class="nk-img-stretch"
+                        />
+
+                        <div class="nk-post-category"></div>
+                      </div>
+                      <h2 class="nk-post-title h4">Moha Abdu</h2>
+
+                      <div class="nk-post-text">
+                        <p>Data Analyst</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nk-gap-1"></div>
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <div class="pl-15 pr-15 services__card">
+                    <div class="nk-blog-post">
+                      <div class="nk-post-thumb">
+                        <img
+                          height="448px"
+                          src="{% static 'assets/assets/researcher/e.jpg' %}"
+                          alt=""
+                          class="nk-img-stretch"
+                        />
+                      </div>
+                      <h2 class="nk-post-title h4">Tame Baye</h2>
+
+                      <div class="nk-post-text">
+                        <p>Market Research Analyst</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nk-gap-1"></div>
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <div class="pl-15 pr-15 services__card">
+                    <div class="nk-blog-post">
+                      <div class="nk-post-thumb">
+                        <img
+                          height="448px"
+                          src="{% static 'assets/assets/researcher/f.jpg' %}"
+                          alt=""
+                          class="nk-img-stretch"
+                        />
+                      </div>
+                      <h2 class="nk-post-title h4">Yetbarek Tsega</h2>
+
+                      <div class="nk-post-text">
+                        <p>Pricing Analyst</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nk-gap-1"></div>
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <div class="pl-15 pr-15 services__card">
+                    <div class="nk-blog-post">
+                      <div class="nk-post-thumb">
+                        <img
+                          height="448px"
+                          src="{% static 'assets/assets/researcher/g.jpg' %}"
+                          alt=""
+                          class="nk-img-stretch"
+                        />
+                      </div>
+                      <h2 class="nk-post-title h4">Kedir Kemal</h2>
+
+                      <div class="nk-post-text">
+                        <p>Business Intelligence Analyst</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nk-gap-1"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END: Carousel -->
+        </div>
+        <div class="nk-gap-5 mt-20"></div>
+      </div>
+      <!-- END: Blog -->
+
+      <!-- START: Contact Info -->
+      <div class="container" id="contact">
+        <div class="nk-gap-5"></div>
+        <div class="row vertical-gap">
+          <div class="col-lg-5">
+            <!-- START: Info -->
+            <h2 class="display-4">Contact Info:</h2>
+            <div class="nk-gap mnt-3"></div>
+
+            <p>
+              For general inquiries and partnership opportunities, please feel
+              free to contact us via email or phone. Our team will be happy to
+              assist you with any questions you may have. Stay connected with us
+              on our social media channels for the latest updates and research
+              insights. We look forward to hearing from you!
+            </p>
+
+            <ul class="nk-contact-info">
+              <li><strong>Address:</strong> Maraki Street, Gondar, Ethiopia</li>
+              <li><strong>Phone:</strong> (+251) 588 940 290</li>
+              <li><strong>Email:</strong> info@uog.edu.et</li>
+            </ul>
+
+            <!-- END: Info -->
+          </div>
+          <div class="col-lg-7">
+            <!-- START: Form -->
+            <form action="#" class="nk-form nk-form-ajax">
+              <div class="row vertical-gap">
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control required"
+                    name="name"
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="email"
+                    class="form-control required"
+                    name="email"
+                    placeholder="Your Email"
+                  />
+                </div>
+              </div>
+
+              <div class="nk-gap-1"></div>
+              <input
+                type="text"
+                class="form-control required"
+                name="title"
+                placeholder="Your Company"
+              />
+
+              <div class="nk-gap-1"></div>
+              <textarea
+                class="form-control required"
+                name="message"
+                rows="8"
+                placeholder="Your Comment"
+                aria-required="true"
+              ></textarea>
+              <div class="nk-gap-1"></div>
+              <div class="nk-form-response-success"></div>
+              <div class="nk-form-response-error"></div>
+              <button class="nk-btn">Send Message</button>
+            </form>
+            <!-- END: Form -->
+          </div>
+        </div>
+        <div class="nk-gap-5"></div>
+      </div>
+      <!-- END: Contact Info -->
+
+      <!--
+    START: Footer
+-->
+      <footer class="nk-footer">
+        <div class="nk-footer-cont">
+          <div class="container text-xs-center">
+            <div class="nk-footer-social">
+              <ul>
+                <li>
+                  <a href="https://twitter.com/UnivOfGondar"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/TheUniversityofGondar"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/channel/UCwgDSM82A-A7hAt6tqIx2CQ"
+                    ><i class="fa fa-youtube-play"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="nk-footer-text">
+              <p>
+                Copyright ©2023 UoG. All rights reserved | Developed by IOT
+                students.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END: Footer -->
+    </div>
+
+    <!-- START: Scripts -->
+
+    <script src="{% static 'assets/assets/js/combined.js' %}"></script>
+    <script src="{% static 'assets/assets/js/jquery-3.6.0.js' %}"></script>
+    <script src="{% static 'assets/assets/js/some.js' %}"></script>
+
+    <!-- END: Scripts -->
+  </body>
+</html>

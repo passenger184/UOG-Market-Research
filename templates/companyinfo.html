@@ -1,0 +1,232 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Additional Information</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="{% static 'company/main.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="form">
+          <div class="left-side">
+            <div class="steps-content">
+              <h2>Step <span class="step-number">1</span></h3>
+              <p class="step-number-content active">
+               
+              </p>
+              <p class="step-number-content d-none">
+               
+              </p>
+              <p class="step-number-content d-none">
+           
+              </p>
+              <p class="step-number-content d-none">
+               
+              </p>
+            </div>
+            <ul class="progress-bar">
+              <li class="active">Basic Information</li>
+              <li>Company Profile</li>
+              <li>Contact Information</li>
+              <li>Agree to Terms and Services</li>
+            </ul>
+          </div>
+          
+          <div class="right-side">
+            <div class="main active">
+              <div class="text">
+                <h2>UOG Market Research</h2>
+                <p>
+                 <b>Enter your company's basic details to get started.</b> 
+                </p>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <input class="fields" type="text" required require id="user_name" />
+                  <span>Company Name</span>
+                </div>
+                <div class="input-div">
+                  <input class="fields" type="number" placeholder="Year Founded"/>
+                  
+                </div>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <input class="fields" type="text" required require />
+                  <span>Phone Number</span>
+                </div>
+                <div class="input-div">
+                  <input class="fields" type="number" placeholder="Registration Number" />
+                  
+                </div>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <input class="fields" type="url" placeholder="Website" />
+                  
+                </div>
+              </div>
+              
+              <div class="buttons">
+                <button class="next_button btn">Next Step</button>
+              </div>
+            </div>
+            <div class="main">
+              <div class="text">
+                <h2>UOG Market Research</h2>
+                <p> <b>Build your company's profile by sharing key details.</b> </p>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <input class="fields" type="text" required require />
+                  <span>Headquarters Location</span>
+                </div>
+                <div class="input-div">
+                  <input class="fields" type="text" placeholder="Number of Employees" />
+                  
+                </div>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <select>
+                    <option>Industry Category</option>
+                      <option>Automotive</option>
+                      <option>Art supplies</option>
+                      <option>Books and educational materials</option>
+                      <option>Construction and Building Materials</option>
+                      <option>Computers</option>
+                      <option>Electronics</option>
+                      <option>Food and Beverages</option>
+                      <option>Furniture</option>
+                      <option>Health and medical supplies</option>
+                      <option>Office Supplies and Stationery</option>
+                      <option>Safety and security equipment</option>
+                  </select>
+                </div>
+                <div class="input-div">
+                  <select>
+                    <option>Business Type</option>
+                      <option>Corporation</option>
+                      <option>LLC</option>
+                      <option>Partnership</option>
+                      <option>Franchise</option>
+                      <option>Joint Venture</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <!-- <input class="fields" class="fields" type="textarea" placeholder="About Us (Brief Company Description)" /> -->
+                  <!-- <span>About Us (Brief Company Description)</span> -->
+                  <textarea style="padding-left: 15px;" placeholder="About Us" name="message" rows="4" cols="24"></textarea>
+                </div>
+                <div class="input-div">
+                  <!-- <input class="fields" type="textarea" placeholder="Mission and Vision" /> -->
+                  <!-- <span>Mission and Vision</span> -->
+                  <textarea style="padding-left: 15px;" placeholder="Mission and Vision" name="message" rows="4" cols="24"></textarea>
+                </div>
+              </div>
+              <div class="buttons button_space">
+                <button class="back_button btn1">Back</button>
+                <button class="next_button btn1">Next Step</button>
+              </div>
+            </div>
+            <div class="main">
+              <div class="text">
+                <h2>UOG Market Research</h2>
+                <p>Enter your contact information for seamless communication.</p>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <input class="fields" type="text" required require />
+                  <span>Address</span>
+                </div>
+                <div class="input-div">
+                  <input class="fields" type="text" required require/>
+                  <span>City</span>
+                </div>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <input class="fields" type="text" placeholder="State/Province " />
+                </div>
+                <div class="input-div">
+                  <input class="fields" type="text" required require />
+                  <span>Country</span>
+                </div>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <input class="fields" type="text" placeholder="Postal Code" />
+                </div>
+              </div>
+              <div class="buttons button_space">
+                <button class="back_button btn1">Back</button>
+                <button class="next_button btn1">Next Step</button>
+              </div>
+            </div>
+
+            <div class="main">
+              <div class="text">
+                <h2>UOG Market Research</h2>
+                <p>Please review and agree to the terms and services.</p>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <label class="terms" for="agree-terms" class="form-label">I agree to the <a href="/agree" target="_blank">Terms and Conditions</a></label>
+              <input style="padding-left: 5px; margin-left: 5px;" type="checkbox" id="agree-terms" name="agree_terms" required>
+                </div>
+              </div>
+              
+              <div class="buttons button_space">
+                <button class="back_button btn1">Back</button>
+                <button class="submit_button btn1" id="next-button">Submit</button>
+              </div>
+            </div>
+            <div class="main">
+              <svg
+                class="checkmark"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 52 52"
+              >
+                <circle
+                  class="checkmark__circle"
+                  cx="26"
+                  cy="26"
+                  r="25"
+                  fill="none"
+                />
+                <path
+                  class="checkmark__check"
+                  fill="none"
+                  d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                />
+              </svg>
+
+              <div class="text congrats">
+                <h2>Congratulations!</h2>
+                <p> <b> Thank you, <span class="shown_name"></span> Company. </b>
+                  Your information has been submitted successfully.
+                  We appreciate your interest in joining UOG Market Research. 
+                  Our team will review your details, and once approved, 
+                 <br> we will activate your account and notify you via email.
+                  We look forward to collaborating with you.</p>
+              </div>
+              <a href="/" class="login-button">Login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'company/app.js' %}"></script>
+  </body>
+</html>

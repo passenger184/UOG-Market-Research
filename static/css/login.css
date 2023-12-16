@@ -1,0 +1,184 @@
+:root {
+  --color-white: hsl(252, 30%, 100%);
+  --color-light: hsl(252, 30%, 95%);
+  --color-gray: hsl(252, 15%, 65%);
+  --color-primary: hsl(252, 75%, 60%);
+  --color-secondary: hsl(252, 100%, 90%);
+  --color-success: hsl(120, 95%, 65%);
+  --color-danger: hsl(0, 95%, 65%);
+  --color-dark: hsl(252, 30%, 17%);
+  --color-black: hsl(252, 30%, 10%);
+
+  --border-radius: 2rem;
+  --card-border-radius: 1rem;
+  --btn-padding: 0.6rem 2rem;
+  --search-padding: 0.6rem 1rem;
+  --card-padding: 1rem;
+
+  --sticky-top-left: 5.4rem;
+  --sticky-top-right: -18rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+}
+
+body {
+  background: var(--color-light);
+  color: var(--color-dark);
+  font-family: "Lato", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 70vw;
+  height: 90vh;
+
+  display: flex;
+  gap: 2rem;
+}
+.container .hero {
+  margin-left: 3rem;
+  margin-top: 2rem;
+  width: 600px;
+}
+.container .hero h2 {
+  margin-top: 1.5rem;
+  letter-spacing: -1px;
+}
+.container .img-container {
+  margin-top: 0;
+  width: 90%;
+  height: 70%;
+  box-shadow: 0 0 3px var(--color-gray);
+  transform: translateY(10%);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.container .img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .logo {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+.container .logo img {
+  width: 90px;
+  height: 90px;
+}
+
+.header {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+.header h2 {
+  margin-bottom: 3px;
+  letter-spacing: -1px;
+}
+.header p {
+  font-size: 14px;
+}
+.header p a {
+  color: var(--color-primary);
+}
+.header p a:hover {
+  text-decoration: underline;
+}
+.form {
+  width: 400px;
+  padding: 15px 30px;
+}
+
+.form-control {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.form-control label {
+  color: #777;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.form-control.success input {
+  border-color: var(--color-success);
+}
+
+.form-control.error input {
+  border-color: var(--color-danger);
+}
+
+.form-control small {
+  border-color: var(--color-danger);
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form .sign-btn {
+  cursor: pointer;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.container-signin form {
+  padding: 30px 40px;
+  padding-bottom: 50px;
+  margin-top: 3.5rem;
+}
+.container-signin .form-control {
+  margin-bottom: 20px;
+}
+
+.form .option {
+  font-size: 14px;
+  color: hsl(252, 33%, 52%);
+}
+.form .option:hover {
+  text-decoration: underline;
+}

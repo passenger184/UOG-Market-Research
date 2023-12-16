@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/research.css' %}" />
+    <title>Market research</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="{% static 'img/UoG-Logo.png' %}" alt="" />
+        </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="{% url 'research' %}">Market Research</a></li>
+          <li>Welcome! {{request.user.username|capfirst}}</li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main-container">
+      <div class="display-info">
+        <div class="card">
+          <h2>Total Number of Companies</h2>
+          <hr />
+          <h1>{{ company_count }}</h1>
+        </div>
+        <div class="card">
+          <h2>Companies Requested</h2>
+          <hr />
+          <h1>{{ total_requested_count }}</h1>
+        </div>
+        <div class="card">
+          <h2>Companies Responded</h2>
+          <hr />
+          <h1>{{ responded_count }}</h1>
+        </div>
+      </div>
+      <form action="{% url 'search' %}" method="get">
+        <div class="search-filter-bar">
+          <div class="search-container">
+            <div class="search-field">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                fill="#c5c4c4"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                ></path>
+              </svg>
+              <input
+                value="{{query}}"
+                name="search-input"
+                type="text"
+                id="search-input"
+                placeholder="Search by company name..."
+              />
+            </div>
+            <button type="submit" id="search-btn">Search</button>
+          </div>
+          <div class="filter-bar">
+            <div class="filter-group">
+              <label for="status-filter">Status:</label>
+              <select id="status-filter" name="status">
+                <option selected disabled value="None">{{status}}</option>
+                <option value="Pending">Pending</option>
+                <option value="Responded">Responded</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="date-filter">Date:</label>
+              <select id="date-filter" name="date">
+                <option selected disabled value="None">{{date_filter}}</option>
+                <option value="all-time">All Time</option>
+                <option value="today">Today</option>
+                <option value="yesterday">Yesterday</option>
+                <option value="this-week">This Week</option>
+                <option value="last-week">Last Week</option>
+                <option value="this-month">This Month</option>
+                <option value="last-month">Last Month</option>
+                <option value="this-year">This Year</option>
+                <option value="last-year">Last Year</option>
+              </select>
+            </div>
+            <button id="apply-filter-btn">Apply Filter</button>
+          </div>
+          <a href="{% url 'request' %}" class="add-request-btn">Add Request</a>
+        </div>
+      </form>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Company Name</th>
+              <th>Product</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for product in products %}
+            <tr>
+              <td>{{ product.company_name }}</td>
+              <td>{{ product.product_name }}</td>
+              <td>{{ product.date|date:"M j, Y, g:i a" }}</td>
+              <td>{{ product.status }}</td>
+              <td class="actions-btns">
+                <a
+                  href="{% url 'detail' pk=product.product_id %}"
+                  class="view-btn"
+                  >View</a
+                >
+                <a
+                  href="{% url 'update' pk=product.product_id %}"
+                  class="update-btn"
+                  >Update</a
+                >
+                <a
+                  href="{% url 'delete' pk=product.product_id %}"
+                  class="delete-btn"
+                  >Delete</a
+                >
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h1>Delete Record?</h1>
+          <p class="modal-confirm-text">
+            Are you sure you want to delete "'<span>comapny_name</span>'s"
+            record?
+          </p>
+          <p>You can't undo this action</p>
+          <div class="option-btns">
+            <button class="cancel-btn">Cancel</button>
+            <button class="confirm-btn">Delete</button>
+          </div>
+        </div>
+      </div>
+      <div class="pagination">
+        <button class="prev-btn">&lt; Previous</button>
+        <div class="page-info"></div>
+        <button class="next-btn">Next &gt;</button>
+      </div>
+    </div>
+
+    <footer>
+      <p class="my-2">
+        Copyright ©2023 UoG. All rights reserved | Developed by IOT students
+        under the guidance of Mr.Zemenu.
+      </p>
+    </footer>
+  </body>
+  <script src="{% static 'js/app.js' %}"></script>
+</html>

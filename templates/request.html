@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <title>Product research</title>
+  </head>
+  <body">
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="{% static 'img/UoG-Logo.png' %}" alt="" />
+      </div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="{% url 'research' %}">Market Research</a></li>
+        <li>Welcome! {{request.user.username|capfirst}}</li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+    <div class="form-main-container" >
+      <div class="left"></div>
+      <div class="middle form-middle">
+        <form action="" class="form" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <h2 style="text-align: center;">Market Research Form</h2>
+          <div class="profile-form-control">
+            <label for="category">Product Category</label>
+            <select id="category" name="category" required>
+              <option selected disabled>-----------</option>
+              {% for catagory in catagories %}
+              <option value="{{ catagory.pk }}">
+                {{ catagory.catagories }}
+              </option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="profile-form-control">
+            <label for="product_name">Product Name</label>
+            <input
+              required
+              name="product_name"
+              type="text"
+              id="product_name"
+              placeholder="Enter product name"
+            />
+          </div>
+          <div class="profile-form-control">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="3" cols="40" placeholder="Enter product description here..."></textarea>
+          </div>
+          <div class="profile-form-control">
+            <label for="quantity">Quantity</label>
+            <input
+            min="0"
+              required
+              name="quantity"
+              type="number"
+              id="quantity"
+              placeholder="Enter the quantity"
+            />
+          </div>
+          <div class="profile-form-control">
+            <label for="unit">Unit</label>
+            <select id="unit" name='unit' required>
+              <option selected disabled>-----------</option>
+              {% for unit in  units %}
+              <option value="{{ unit.pk }}">
+                {{ unit.unit_choice }}
+              </option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="profile-form-control">
+            <label for="remark">Remark</label>
+            <input
+              name="remark"
+              type="text"
+              id="remark"
+              placeholder=""
+            />
+          </div>
+          <div style="display: inline;">
+            <button type="submit" style="margin-top: 2rem;">Send Request</button>
+          </div>
+        </form>
+      </div>
+      <div class="right"></div>
+    </div>
+    <footer>
+      <p class="my-2">
+        Copyright ©2023 UoG. All rights reserved | Developed by IOT students
+        under the guidance of Mr.Zemenu.
+      </p>
+    </footer>
+  </body>
+</html>

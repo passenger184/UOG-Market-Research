@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %} " />
+    <link
+      rel="stylesheet"
+      href="{% static 'font-awesome1/css/all.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'assets/research.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/main.css' %}" />
+
+    <title>Market research</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="{% static 'images/UoG-Logo.png' %}" alt="" />
+        </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="{% url 'research' %}">Market Research</a></li>
+          <li>Welcome! {{request.user.username|capfirst}}</li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="row d-flex flex-row justify-content-center">
+      <div class="col-md-6 mx-5 p-5 my-5 d-flex">
+        <div class="card card-body">
+          <p>
+            Please confirm if you want to delete the entry for
+            {{product.company_name}}.
+          </p>
+          <p>This action cannot be undone.</p>
+          <form action="" method="POST">
+            {% csrf_token %}
+            <a class="btn btn-warning mx-3" href="{% url 'research' %}"
+              >Cancel</a
+            >
+            <input class="btn btn-danger mx-5" type="submit" name="confirm" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="my-2">
+        Copyright ©2023 UoG. All rights reserved | Developed by IOT students
+        under the guidance of Mr.Zemenu.
+      </p>
+    </footer>
+  </body>
+  <script src="{% static 'assets/app.js' %}"></script>
+</html>

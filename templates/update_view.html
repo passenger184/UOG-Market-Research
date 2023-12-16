@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market research</title>
+    <link
+      rel="stylesheet"
+      href=" {% static 'assets/bootstrap_src/bootstrap.min.css' %} "
+    />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  </head>
+
+  <body style="background-color: #eee">
+    <header class="">
+      <nav>
+        <div class="logo">
+          <img src="{% static 'img/UoG-Logo.png' %}" alt="" />
+        </div>
+        <ul>
+          <li>
+            <a style="text-decoration: none !important" href="/">Home</a>
+          </li>
+          <li>
+            <a href="{% url 'research' %}">Market Research</a>
+          </li>
+          <li>Welcome! {{request.user.username|capfirst}}</li>
+          <li class="my-0"><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="my-4">
+      <section style="background-color: #eee">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+          <div class="container h-100">
+            <div
+              class="row d-flex justify-content-center align-items-center h-100"
+            >
+              <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="card" style="border-radius: 15px">
+                  <div class="card-body p-5">
+                    <h2 class="text-uppercase text-center mb-5">
+                      Market Research Form
+                    </h2>
+
+                    <form
+                      action=""
+                      class="form"
+                      method="POST"
+                      enctype="multipart/form-data"
+                    >
+                      {% csrf_token %}
+
+                      <div class="form-outline mb-3">
+                        <label class="form-label" for="product_name"
+                          >Product Name</label
+                        >
+                        <input
+                          value="{{product.product_name}}"
+                          name="product_name"
+                          type="text"
+                          id="product_name"
+                          placeholder="Enter product name"
+                          class="form-control"
+                        />
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="description"
+                          >Description</label
+                        >
+                        <textarea
+                          class="form-control mb-2"
+                          id="description"
+                          name="description"
+                          rows="2"
+                          cols="40"
+                          placeholder="Enter product description here..."
+                        >
+{{product.description}}</textarea
+                        >
+                      </div>
+                      <div class="profile-form-control">
+                        <label class="form-label" for="quantity"
+                          >Quantity</label
+                        >
+                        <input
+                          min="0"
+                          value="{{product.quantity}}"
+                          name="quantity"
+                          type="number"
+                          id="quantity"
+                          placeholder="Enter the quantity"
+                          class="form-control mb-3"
+                        />
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="unit">Unit</label>
+                        <select id="unit" name="unit" class="form-select mb-3">
+                          <option selected disabled>-----------</option>
+                          {% for unit in units %}
+                          <option value="{{ unit.pk }}">
+                            {{ unit.unit_choice }}
+                          </option>
+                          {% endfor %}
+                        </select>
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="remark">Remark</label>
+                        <input
+                          value="{{product.remark}}"
+                          name="remark"
+                          type="text"
+                          id="remark"
+                          placeholder=""
+                          class="form-control"
+                        />
+                      </div>
+
+                      <div class="col d-flex">
+                        <a
+                          class="btn btn-block gradient-custom-2 mx-1 text-center"
+                          href="{% url 'research' %}"
+                          >Back</a
+                        >
+                        <button
+                          type="submit"
+                          class="mx-4 btn btn-info btn-block text-body ms-auto"
+                        >
+                          Update Request
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <p class="my-2">
+        Copyright ©2023 UoG. All rights reserved | Developed by IOT students
+        under the guidance of Mr.Zemenu.
+      </p>
+    </footer>
+  </body>
+  <script src="{% static 'assets/bootstrap_src/bootstrap.bundle.min.js' %}"></script>
+</html>

@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Market Research</title>
+    <link
+      rel="stylesheet"
+      href=" {% static 'assets/bootstrap_src/bootstrap.min.css' %} "
+    />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+  </head>
+  <body>
+    <!-- <div class="wrapper"> -->
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="{% static 'img/UoG-Logo.png' %}" alt="" />
+        </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="{% url 'research' %}">Market Research</a></li>
+          <li>Welcome! {{request.user.username}}</li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    {% block content %} {% endblock %}
+    <footer>
+      <p class="my-2">
+        Copyright ©2023 UoG. All rights reserved | This website is made by IOT
+        students and Mr. Zemenu
+      </p>
+    </footer>
+    <!-- </div> -->
+    <script src="{% static 'assets/bootstrap_src/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>
